@@ -10,9 +10,12 @@ const commentsSlice = createSlice({
       state.comments.push(action.payload);
     },
     removeComment: (state, action) => {
-      state.comments = state.comments.filter(
-        (comment) => comment.id !== action.payload
+      const index = state.comments.findIndex(
+        (comment) => comment.id === action.payload
       );
+      if (index !== -1) {
+        state.comments.splice(index, 1);
+      }
     },
   },
 });
