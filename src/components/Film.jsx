@@ -1,5 +1,5 @@
 import { Card, CardFooter, CardImg, Col, Row } from "react-bootstrap";
-
+import "../css/film.css";
 function Film({ movie }) {
   const formatFrenchDate = (dateString) => {
     const date = new Date(dateString);
@@ -18,7 +18,6 @@ function Film({ movie }) {
             variant="top"
             src={movie.poster_path}
             alt={`Affiche du film ${movie.original_title}`}
-            style={{ height: "350px", objectFit: "cover" }}
           />
           <Card.Body>
             <Card.Title>{movie.original_title}</Card.Title>

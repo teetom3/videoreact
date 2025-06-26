@@ -16,13 +16,8 @@ function Comments() {
         <Card>
           <Card.Body>
             {comments.length === 0 ? (
-              <div className="text-center py-4">
-                <p className="text-muted mb-0">
-                  Aucun commentaire pour le moment.
-                </p>
-                <small className="text-muted">
-                  Soyez le premier à donner votre avis !
-                </small>
+              <div className="alert alert-info mb-0">
+                Aucun commentaire pour le moment.
               </div>
             ) : (
               <div>
