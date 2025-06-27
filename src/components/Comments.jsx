@@ -26,7 +26,7 @@ function Comments() {
         ) : (
           <ListGroup>
             {comments.map((comment, index) => (
-              <ListGroupItem className="p-3">
+              <ListGroupItem key={comment.id} className="p-3">
                 <div className="d-flex justify-content-between align-items-start mb-2">
                   <div>
                     <div className="d-flex align-items-center mb-1">
